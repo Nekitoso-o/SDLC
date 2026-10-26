@@ -1,0 +1,41 @@
+﻿@startuml
+skinparam classAttributeIconSize 0
+
+class CreditModel <<Active Model>> {
+  - rate : double
+  - amount : double
+  - termMonths : int
+  - monthlyPayment : double
+  - overpayRatio : double
+  - totalPayment : double
+  + calculate(rate, amount, term) : void
+  + getMonthlyPayment() : double
+  + getOverpayRatio() : double
+  + addPropertyChangeListener(l) : void
+}
+
+class MainWindow <<Controller + View>> {
+  - lastRate : String
+  - lastAmount : String
+  - lastTerm : String
+  + openInputDialog() : void
+  + propertyChange(evt) : void
+  + updateView() : void
+}
+
+class InputDialog <<View>> {
+  + setInitialValues(rate, amount, term) : void
+  + isConfirmed() : boolean
+  + getRateText() : String
+  + getAmountText() : String
+  + getTermText() : String
+}
+
+CreditModel -[hidden]right-> MainWindow
+MainWindow -[hidden]right-> InputDialog
+
+CreditModel -right-> MainWindow : dataChanged()
+MainWindow -left-> CreditModel : calculate()
+MainWindow -right-> InputDialog : открывает
+InputDialog -left-> MainWindow : передаёт данные
+@enduml
