@@ -12,9 +12,3 @@ target/
 *.iml
 out/
 
-# Временные файлы ОС и MS Office
-*.log
-.DS_Store
-Thumbs.db
-~$*.doc*
-~$*.pdf
