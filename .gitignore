@@ -1,0 +1,14 @@
+# Временные папки сборки Maven и скомпилированные классы
+target/
+**/target/
+*.class
+*.jar
+
+# Служебные папки и файлы IntelliJ IDEA
+.idea/
+**/.idea/
+.run/
+**/.run/
+*.iml
+out/
+
