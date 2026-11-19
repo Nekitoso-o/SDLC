@@ -578,8 +578,12 @@
 
 #### Прототип и структурная спецификация графического интерфейса приложения Game Shelf
 
+<img width="975" height="595" alt="image" src="https://github.com/user-attachments/assets/c9863878-4d64-4272-9794-c8e309303c67" />
+
 **1. Визуальный мокап пользовательского интерфейса (Excalidraw):**
 !\[Прототип интерфейса приложения Game Shelf](../images/gameshelf-gui-mockup.png)
+
+<img width="934" height="375" alt="image" src="https://github.com/user-attachments/assets/aa6643ca-6c75-451f-967a-f6f176e7c96b" />
 
 **2. Структурная спецификация интерфейса на языке SysMLv2:**
 !\[Структурная схема UI на SysML](../images/gameshelf-sysml-ui.png)
